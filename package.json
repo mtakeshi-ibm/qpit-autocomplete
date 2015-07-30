@@ -2,14 +2,14 @@
   "name": "qpit-autocomplete",
   "main": "./lib/main",
   "version": "0.1.0",
-  "description": "QPIT autocomplete package",
+  "description": "QPIT support tools for data dictionary",
   "keywords": [
     "ibm",
     "qpit",
     "autocomplete",
     "productivity"
   ],
-  "repository": "https://github.com/atom/qpit-autocomplete",
+  "repository": "https://github.com/mtakeshi-ibm/qpit-autocomplete.git",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
