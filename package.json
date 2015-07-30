@@ -1,7 +1,7 @@
 {
   "name": "qpit-autocomplete",
   "main": "./lib/main",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "QPIT support tools for data dictionary",
   "keywords": [
     "ibm",
@@ -23,7 +23,7 @@
   "providedServices": {
     "autocomplete.provider": {
       "versions": {
-      "2.0.0": "provide"
+        "2.0.0": "provide"
       }
     }
   }
