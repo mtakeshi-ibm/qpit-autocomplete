@@ -1,0 +1,37 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus
+'context-menu':
+  'atom-text-editor': [
+    # {
+    #   'label': 'Toggle QPIT-autocomplete'
+    #   'command': 'qpit-autocomplete:toggle'
+    # }
+    # {
+    #   'label': 'Toggle QPIT-autocomplete'
+    #   'command': 'qpit-autocomplete:toggle'
+    # }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      {
+        'label': 'QPIT AutoComplete'
+        'submenu': [
+          {
+            'label': 'Toggle finder view'
+            'command': 'qpit-autocomplete:toggle'
+          }
+          {
+            'label': 'Toggle local cache status'
+            'command': 'qpit-autocomplete:show-local-cache-status'
+          }
+          {
+            'label': 'Retrieve all data model docs'
+            'command': 'qpit-autocomplete:retrieve-all-data-model-docs'
+          }
+        ]
+      }
+
+    ]
+  }
+]

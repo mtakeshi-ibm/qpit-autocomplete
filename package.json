@@ -1,0 +1,30 @@
+{
+  "name": "qpit-autocomplete",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "description": "QPIT autocomplete package",
+  "keywords": [
+    "ibm",
+    "qpit",
+    "autocomplete",
+    "productivity"
+  ],
+  "repository": "https://github.com/atom/qpit-autocomplete",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.3"
+  },
+  "devDependencies": {
+    "coffeelint": "^1.9.7"
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+      "2.0.0": "provide"
+      }
+    }
+  }
+}
