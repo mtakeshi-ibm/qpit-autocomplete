@@ -191,6 +191,12 @@ module.exports = QpitAutocomplete =
       type:'string'
       default:''
       order:250
+    formatLocalJsonCacheFile:
+      title: 'Format the local JSON cache file'
+      description : 'padding tabs the local json text on writing it to home directory.'
+      type:'boolean'
+      default:false
+      order:300
 
   # entiry point as a specification for Provider API
   provide: ->

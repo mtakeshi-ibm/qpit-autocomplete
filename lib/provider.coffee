@@ -166,6 +166,12 @@ class QpitDataModelProvider
       get('qpit-autocomplete.otherNamePostfix')
     @otherNamePostfix = @otherNamePostfix?.trim()
 
+    #------------------------------------------------
+    # boolean
+    @formatLocalJsonCacheFile = atom.config.
+      get('qpit-autocomplete.formatLocalJsonCacheFile')
+
+
     # regist an event listeners
     atom.config.onDidChange('qpit-autocomplete.apiKey',
       (event) =>
@@ -281,6 +287,11 @@ class QpitDataModelProvider
     atom.config.onDidChange('qpit-autocomplete.otherNamePostfix',
       (event) =>
         @otherNamePostfix = event.newValue
+    )
+    #-------------------------
+    atom.config.onDidChange('qpit-autocomplete.formatLocalJsonCacheFile',
+      (event) =>
+        @formatLocalJsonCacheFile = event.newValue
     )
 
     # instance method
@@ -587,8 +598,15 @@ class QpitDataModelProvider
           callback({response : resultData})
 
         # write raw response to local cache (in HOME directory)
+        formatString = null
+        if @formatLocalJsonCacheFile
+          formatString = '\t'
+        else
+          formatString = null
+
         writeCacheFileInHomeDirectory(null,
-          JSON.stringify(resultData, null, '\t'),
+          #JSON.stringify(resultData, null, '\t'),
+          JSON.stringify(resultData, null, formatString),
           {
             encoding : 'utf-8'
           },
