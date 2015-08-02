@@ -18,19 +18,19 @@ module.exports = QpitAutocomplete =
   # Atom package specification API, configurations
   config:
     apiKey:
-      title : 'API key for the document DB (required and case sensitive)'
+      title : 'API key for document DB (required and case sensitive)'
       description : 'input API key which is informed by Administrator.'
       type:'string'
       default : ''
       order: 10
     apiPassword:
-      title : 'API password for the document DB (required and case sensitive)'
+      title : 'API password for document DB (required and case sensitive)'
       description :'input API password which is informed by your administrator.'
       type:'string'
       default : ''
       order: 20
     apiBaseUrl:
-      title : 'API Base URL for the document DB (required and case sensitive)'
+      title : 'API Base URL for document DB (required and case sensitive)'
       description : 'API URL for the server. DO NOT include the DB name as a
       part of URL. example-> https://YOUR_ACCOUNT.cloudant.com/'
       type:'string'
@@ -43,8 +43,8 @@ module.exports = QpitAutocomplete =
       default : 'qpitdb'
       order: 40
     maxItemSize:
-      title : 'Maximum number of candidate items for display'
-      description : 'limit to show the maximum number.'
+      title : 'Maximum number of candidates'
+      description : 'maximum limit to show.'
       type:'integer'
       default : 50
       enum : [10, 50, 150, 200, 250, 300]
@@ -57,14 +57,14 @@ module.exports = QpitAutocomplete =
     #   enum : [0, 1, 3, 5, 10, 15, 20, 30, 40, 50, 60]
     #   order: 55
     autoCompleteTriggerChar:
-      title : 'Auto completion trigger character(s) in a text editor'
-      description : 'autocompleton trigger.'
+      title : 'Auto completion trigger character(s) in text editor'
+      description : 'trigger characters for auto completion.'
       type:'string'
       default: '@'
       enum : ['*', '**', '@', '@@' ]
       order: 60
     suggestionTargetItemFieldName:
-      title : 'Fieild name of suggestion target Item'
+      title : 'Field name of a suggested target Item'
       description : ''
       type:'string'
       default: 'nameJa'
@@ -83,16 +83,16 @@ module.exports = QpitAutocomplete =
       default : 'Granted'
       order : 80
     showSpecifiedTagsOnly:
-      title : 'Show specified all of tags only'
-      description : 'input your tag names (comma separated)'
+      title : 'Show specified tags only'
+      description : 'input tag names (comma separated)'
       type : 'array'
       default : []
       items:
         type: 'string'
       order : 90
     copyToClipboardOnInserted:
-      title : 'Copy the suggestion text to clipboard on insertion'
-      description : 'copy the suggestion text to clipboard when you choose it.'
+      title : 'Copy to clipboard on selection'
+      description : 'copy the suggested text to clipboard when you choose it.'
       type : 'boolean'
       default : true
       order : 100
@@ -174,26 +174,26 @@ module.exports = QpitAutocomplete =
       order:220
     #--------------------------
     enableSuggestionOther:
-      title : 'Enable suggestion for other type (ex -> PrimitiveType, and so on.)'
+      title : 'Enable suggestion for other type (ex -> PrimitiveType, etc.)'
       description : ''
       type:'boolean'
       default: true
       order : 230
     otherNamePrefix:
-      title: 'Prefix of other Suggestion'
+      title: 'Prefix of the other Suggestion'
       description : 'prefix string for suggestion text.'
       type:'string'
       default:''
       order :240
     otherNamePostfix:
-      title: 'Postfix of other Suggestion'
+      title: 'Postfix of the other Suggestion'
       description : 'postfix string for suggestion text.'
       type:'string'
       default:''
       order:250
     formatLocalJsonCacheFile:
       title: 'Format the local JSON cache file'
-      description : 'padding tabs the local json text on writing it to home directory.'
+      description : 'padding tab characters into local json cache.'
       type:'boolean'
       default:false
       order:300
