@@ -67,8 +67,8 @@ module.exports = QpitAutocomplete =
       title : 'Field name of a suggested target Item'
       description : ''
       type:'string'
-      default: 'nameJa'
-      enum : ['name', 'nameJa']
+      default: 'aliasName'
+      enum : ['name', 'aliasName']
       order: 65
     showGrantedOnly:
       title : 'Show granted items only'
